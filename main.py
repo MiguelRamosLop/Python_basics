@@ -158,5 +158,93 @@ if __name__ == '__main__':
         print(f'El ', {round(price_final)}, ' es 12, ni menor ni mayor que el')
     else:
         print(f'El ', {round(price_final)}, ' es mayor que 12')
+       
+    # Condicionales Anidados (garantia antes excepciones)
+    edad = int(input('Digite su edad...'))
+    if 0 >= edad >= 100:
+        print('Edad incorrecta')
+    else:
+        print('Edad correcta')
+        if edad >= 18:
+            print('Eres mayor de edad')
+        else:
+            print('No eres mayor de edad')
+
+    # Ejericio 6 : Pares, impares o los dos
+
+    mi_number1 = int(input('Digite un numero entero...'))
+    mi_number2 = int(input('Digite un numero entero...'))
+
+    if mi_number1 % 2 == 0 and mi_number2 % 2 == 0:
+        print('Los dos numeros son pares.')
+    else:
+        if mi_number1 % 2 == 0:
+            print('Solo el primer numero es par')
+        else:
+            print('Solo el segundo numero es par')
+
+    # Ejercicio 7 : cual es mayor de 3 numeros
+
+    mi_number1 = int(input('Digite el primer numero...'))
+    mi_number2 = int(input('Digite el primer numero...'))
+    mi_number3 = int(input('Digite el primer numero...'))
+
+    if mi_number1 >= mi_number2 and mi_number1 >= mi_number3:
+        print(f'El numero mayor es {mi_number1}')
+    if mi_number2 >= mi_number1 and mi_number2 >= mi_number3:
+        print(f'El numero mayor es {mi_number2}')
+    if mi_number3 >= mi_number1 and mi_number3 >= mi_number2:
+        print(f'El numero mayor es {mi_number3}')
+
+    # Ejercicio 8 : calibrar caracteres
+
+    letra = input('Digite el caracter:').lower()
+    # el metodo lower hace que el caracter lo transforme a minuscula y lo guarda dentro de letra
+
+    if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u':
+        print('Es vocal')
+    else:
+        print('No es vocal')
+
+    # Ejercicio 9 : Calculadora
+
+    mi_number1 = int(input('Digite un entero...'))
+    mi_number2 = int(input('Digite el segundo...'))
+
+    operacion = input('Digite la operacion...').upper()
+
+    if operacion == 'S':
+        print('\nLa suma es ...', mi_number1 + mi_number2)
+    if operacion == 'R':
+        print('\nla resta es...', mi_number1 - mi_number2)
+
+    # Ejercicio 10 : operaciones en un cajero
+
+    saldo = 1000
+    print('\t.:MENU:.')
+    print('1. Ingresar dinero')
+    print('2. Retirar dinero')
+    print('3. Mostrar cartera')
+    print('4. Salir')
+    opcion = int(input('Digite una opcion de menu...'))
+    print('\n')
+
+    if opcion == 1:
+        extra = float(input('Digite dinero a ingresar...'))
+        saldo += extra
+        print(f'la cuenta ahora tiene ...{saldo}$')
+    elif opcion == 2:
+        retiro = float(input('Digite dinero a retirar...'))
+        if retiro > saldo:
+            print('No tiene tal cantidad')
+        else:
+            saldo -= retiro
+            print(f'la cuenta ahora tiene ...{saldo}$')
+    elif opcion == 3:
+        print(f'la cuenta ahora tiene ...{saldo}$')
+    elif opcion == 4:
+        print('Saliste...')
+    else:
+        print('Opcion incorrecta')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
