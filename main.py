@@ -246,5 +246,75 @@ if __name__ == '__main__':
         print('Saliste...')
     else:
         print('Opcion incorrecta')
+       
+    # Uso de listas (arrays en Java)
+    lista = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 5.60]
+    print(lista)
+    print(lista[0])  # lunes
+    print(lista[0:3])  # Lunes, martes y miercoles
+    print(lista[5])  # 5.60
+
+    lista.append(34)  # se añade al final de la lista el valor introducido
+    lista.insert(2, 'Saludos')  # (indice, valor)
+    lista.extend([56, 78, 90])  # añade una lista a la otra creada dentro del ()
+
+    print(lista)
+    print('Martes' in lista)  # permite saber si un dato esta en la lista (devuelve un booleano)
+    print(lista.index('Martes'))  # devuelve la posicion/indice donde se encuentra
+    lista.append(34)
+    print(lista.count(34))  # permite saber las veces que aparece un determinado valor en la lista
+
+    lista.pop()  # elimina el ultimo elemento
+    print(lista)
+    lista.pop(2)  # elimina el elemento en la posicion
+    print(lista)
+    lista.remove('Martes')  # elimina el elemento donde este
+    print(lista)
+    # lista.clear(), elimina todos los elementos de la lista quedando vacia
+    # lista.sort(), ordena los elemntos
+    # lista.sort(reverse = True), ordena los elementos de mayor a menor
+
+    # Tuplas = listas inmutables (no se pueden modificar)
+    tupla = ('Miguel', 5, 67.89)
+    mi_lista = list(tupla)
+    print(mi_lista)
+
+    # Conjuntos
+
+    mi_conjunto = set()
+    mi_conjunto = {1.0, 2.0, 3.0}
+    mi_conjunto.add(4.0)  # lo añade donde quiere
+    mi_conjunto.add('Adios')
+    mi_conjunto.add(6)
+    print(mi_conjunto)
+
+    mi_conjunto.discard('Adios')
+    print(mi_conjunto)
+    print(3 not in mi_conjunto)
+    print(1.0 in mi_conjunto)
+
+    a = {1, 2, 3, 4}
+    b = {5, 6, 7, 8, 3}
+
+    print(a == b)  # da igual el orden, si tiene los mismos elementos devuelve True
+    print(len(a))  # saber cuantos elemento tiene un conjunto
+
+    # operaciones de conjuntos
+    print(a | b)  # union (Solo salen los elementos una vez)
+    print(a & b)  # interseccion
+    print(a - b)  # elementos que estan en a que no estan en b
+    print(a ^ b)  # diferencia simentria (estan en a o en b, pero no en los dos)
+    print(a.issubset(b))  # saber si los elementos de un conjunto estan en otro conjunto
+
+    # Diccionarios
+
+    mi_diccionario = {'rojo': 'red', 'azul': 'blue'}
+    print(mi_diccionario)
+    print(mi_diccionario['rojo']) # el valor de la clave que se desee
+
+    del(mi_diccionario['rojo']) # para eliminar
+    print(mi_diccionario.get('azul','Valor no encontrado'))
+    print(mi_diccionario.values())
+    print(len(mi_diccionario))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
