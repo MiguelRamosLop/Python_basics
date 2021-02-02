@@ -105,5 +105,58 @@ if __name__ == '__main__':
 
     mi_number = len(mi_nombre)  # cuenta los caracteres que conforman el objeto
     print(mi_nombre)
+    
+     # Ejercicio 1 : Resolucion de operacion aritmrtica
+    input_a = float(input('Digite el valor para almacenar en a...'))
+    print(f'el valor almacenado en a es: ', {input_a})
+
+    input_b = float(input('Digite el valor para almacenar en b...'))
+    print(f' el valor almacenado en b es: ', {input_b})
+
+    input_c = float(input('Digite el valor para almacenar en c...'))
+    print(f'el valor almacenado en c es: ', {input_c})
+
+    resultado = (input_a ** 3 * (input_b ** 2 - 2 * input_a * input_c)) / 2 * input_b
+    print(f'el resultado es...', {round(resultado)})
+
+    # Ejercicio 2 : Resolucion de operacion logica
+    resultado_1 = (3 + 5 * 8)
+    resultado_2 = ((-6 / 3 * 4) + 2)
+    input_a = input('Digite el valor para almacenar en a...')
+    input_b = input('Digite el valor para almacenar en b...')
+
+    print((resultado_1 < 3) and (resultado_2 < 2) or (input_a > input_b))
+
+    # Ejercicio 3 : Hacer un programa para intercambiar variables
+    input_a = input('Digite el valor para almacenar en a...')
+    print(f'El valor es...', {input_a})
+    input_b = input('Digite el valor para almacenar en b...')
+    print(f'El valor es...', {input_b})
+
+    input_a, input_b = input_b, input_a
+    print(f'El nuevo valor de a es...', {input_a})
+    print(f'El nuevo valor de b es...', {input_b})
+
+    # Ejercicio 4 : Programa para calcular el área y la longitud de una circunferencia dado el radio
+    radio = float(input('Digite el radio de la circunferencia...'))
+    import math
+    area = math.pi*radio**2
+    longitud = 2*math.pi*radio
+    print(f'El area es...', {round(area)})
+    print(f'La longitud es...', {round(longitud)})
+
+    # Ejercicio 5 : Calcular porcentajes (descuentos...)
+    price = float(input('Digite el precio del producto...'))
+    descuento = (price*15)/100
+    price_final = price - descuento
+    print(f'El precio final a pagar es de ',{round(price_final)},'$')
+
+    # Condicionales
+    if price_final<12:
+        print(f'El ', {round(price_final)}, ' es menor que 12')
+    elif price_final ==12:
+        print(f'El ', {round(price_final)}, ' es 12, ni menor ni mayor que el')
+    else:
+        print(f'El ', {round(price_final)}, ' es mayor que 12')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
