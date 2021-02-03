@@ -316,5 +316,81 @@ if __name__ == '__main__':
     print(mi_diccionario.get('azul','Valor no encontrado'))
     print(mi_diccionario.values())
     print(len(mi_diccionario))
+    
+    # Pilas
+
+    mi_pila = [1, 2, 3, 4]
+    mi_pila.append(5)  # para añadir elementos al final
+    print(mi_pila)
+    mi_pila.pop()  # saca el ultimo elemento de la pila
+    print(mi_pila)
+    last = mi_pila.pop()
+    print(last)
+
+    # colas
+
+    mi_cola = ['Miguel', 'Fran', 'Xhema']
+    print(mi_cola)
+    mi_cola.append('Jose Luis')  # agregar elementos
+    print(mi_cola)
+    # sacar elementos desde el principio (diferencia con las pilas)
+    first_element = mi_cola.pop(0)
+    print(first_element)
+    print(mi_cola)
+
+    # Ejercicio 11 : lista eliminar elementos repetidos
+
+    mi_lista = [1, 2, 3, 2, 4, 5, 3]
+
+    mi_conjunto = set(mi_lista)
+
+    mi_lista = list(mi_conjunto)
+
+    # podria resolverse unicamente asi: mi_lista = list(set(mi_lista))
+
+    print(mi_lista)
+
+    # Ejercicio 12 : crear listas a partir de listas
+
+    lista_1 = [1, 2, 1, 5, 5, 6, 7]
+    lista_2 = [2, 2, 3, 4, 4, 7, 8]
+
+    conjunto_1 = set(lista_1)
+    conjunto_2 = set(lista_2)
+
+    union = list(conjunto_1 | conjunto_2)
+    print(union)
+    interseccion = list(conjunto_1 & conjunto_2)
+    print(interseccion)
+    solo_1 = list(conjunto_1 - conjunto_2)
+    print(solo_1)
+    solo_2 = list(conjunto_2 - conjunto_1)
+    print(solo_2)
+
+    # Bucle while
+
+    import math
+
+    numero = int(input('Digite un numero'))
+    while numero < 0:
+        print('Ingrese un numero mas pequeño')
+        numero = int(input('Digite un numero'))
+    raiz = round(math.sqrt(numero))
+    print(raiz)
+
+    # uso de iteradores
+    i = 0
+    while i < 10:
+        print('+1')
+        i += 1
+
+    # Bucle for (sabemos cuantas veces se repite, numero determinado de iteraciones)
+
+    for i in [1,2,3,4,5,'Miguel','Fran',8.90]:
+        print_hi(f'elemento:{i}')
+
+    coleccion = {'Miguel':19,'Javier':23}
+    for clave,valor in coleccion.items():
+        print(f'{clave} -> {valor}')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
